@@ -10,22 +10,6 @@ services:
       - "8082:8082" # container listens on 8080
     networks:
       - streamhive-net
-    depends_on:
-      - mysql
-
-  mysql:
-    image: mysql:8.0
-    container_name: streamhive-mysql
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: defaultdb
-      MYSQL_USER: avnadmin
-      MYSQL_PASSWORD: AVNS_UP4R73Fxd61vmpfkf2l
-    ports:
-      - "3307:3306"
-    networks:
-      - streamhive-net
 
 networks:
   streamhive-net:
